@@ -15,21 +15,28 @@
                 HorizontalOptions="Center" />
 
             <Label 
-                Text="Welcome to .NET Multi-platform App UI"
+                Text="{Binding Title, Mode=OneWay}"
                 Grid.Row="1"
                 SemanticProperties.HeadingLevel="Level1"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 FontSize="18"
                 HorizontalOptions="Center" />
 
-            
-           
+            <Button
+                Text="Take me back!"
+                FontAttributes="Bold"
+                Grid.Row="3"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Command="{Binding NavigateBackCommand}"
+                HorizontalOptions="Center" />
 
-            <Image Grid.Row="4"
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                WidthRequest="250"
-                HeightRequest="310"
+
+            <Button
+                Text="Webview?"
+                FontAttributes="Bold"
+                Grid.Row="4"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Command="{Binding NavigateCommand}"
                 HorizontalOptions="Center" />
 
         </Grid>

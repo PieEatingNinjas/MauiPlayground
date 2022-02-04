@@ -2,9 +2,7 @@
 
 public partial class MainPage : ContentPage
 {
-	
-
-	public MainPage(MauiProgram.MainPageViewModel vm)
+	public MainPage(MainPageViewModel vm)
 	{
 		BindingContext = vm;
 		InitializeComponent();

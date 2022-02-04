@@ -22,13 +22,12 @@
                 FontSize="18"
                 HorizontalOptions="Center" />
 
-            <Label 
-                Text="Current count: 0"
+            <Entry 
+                Text="{Binding Text}"
                 Grid.Row="2"
                 FontSize="18"
                 FontAttributes="Bold"
-                x:Name="CounterLabel"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Fill" />
 
             <!--<Button 
                 Text="Click me"

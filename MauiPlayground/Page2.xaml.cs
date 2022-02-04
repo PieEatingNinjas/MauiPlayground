@@ -2,9 +2,10 @@
 
 public partial class Page2 : ContentPage
 {
-	public Page2(MauiProgram.Page2ViewModel vm)
+	public Page2ViewModel ViewModel { get; }
+	public Page2(Page2ViewModel vm)
 	{
-		BindingContext = vm;
+		BindingContext = ViewModel = vm;
 		InitializeComponent();
 	}
 }

@@ -21,14 +21,18 @@ public class Page2ViewModel : INotifyPropertyChanged
         _navigationService = navService;
     }
 
+#pragma warning disable CS8632 // The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.
     public event PropertyChangedEventHandler? PropertyChanged;
+#pragma warning restore CS8632 // The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.
 
     public void Init(string parameter)
     {
         Title = parameter;
     }
 
+#pragma warning disable CS8632 // The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.
     private void RiasePropertyChanged([CallerMemberName]string? property = null)
+#pragma warning restore CS8632 // The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.
         => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
 
     public Command NavigateBackCommand => new Command(async () => await _navigationService.NavigateBack());

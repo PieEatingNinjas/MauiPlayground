@@ -32,6 +32,8 @@ public class NavigationService
         var page = _services.GetService<Page2>();
         if (page != null)
         {
+            //await page.ViewModel.PreInit(paramater);
+            //Navigation.PushModalAsync()
             await Navigation.PushAsync(page, true);
             page.ViewModel.Init(parameter);
         }

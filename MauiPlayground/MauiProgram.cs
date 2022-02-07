@@ -21,6 +21,12 @@ public static class MauiProgram
         builder.Services.AddSingleton<Page2ViewModel>();
         builder.Services.AddSingleton<Page3>();
         builder.Services.AddSingleton<NavigationService>();
+        builder.Services.AddSingleton<IRepo, Repo>();
+
+        var httpClient = new HttpClient();
+        httpClient.BaseAddress = new Uri(Config.BaseUrl);
+
+        builder.Services.AddSingleton(httpClient);
 
         return builder.Build();
 

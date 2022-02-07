@@ -2,9 +2,7 @@
 {
     internal static class Config
     {
-        public static string BaseUrl
-        {
-            get =>
+        public static string BaseUrl => 
 #if TEST
                     "http://www.google.com";
 #elif PRD
@@ -12,6 +10,5 @@
 #else
                     "http://www.microsoft.com";
 #endif
-        }
     }
 }
